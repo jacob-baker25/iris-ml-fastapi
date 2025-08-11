@@ -3,7 +3,7 @@
 - A FastAPI-based project for experimenting with machine learning workflows, APIs, and deployment. This repository contains code for serving ML models via a lightweight, high-performance REST API.
 
 Features: 
-- High-Performance API: Utilizes FastAPI for an exceptionally fast and efficient API.
+- High-Performance API: Utilizes FastAPI for a fast and efficient API.
 - Modular Design: Built for easy extension and customization.
 - ML Inference Endpoints: Includes pre-built endpoints to deploy machine learning models quickly.
 - Automatic API Docs: Integrates Swagger UI & ReDoc for interactive, auto-generated documentation.
