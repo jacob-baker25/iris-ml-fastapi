@@ -31,8 +31,8 @@ This project provides a RESTful API built with **FastAPI** that uses a trained *
 
 1. Clone Repository:
 ```bash
-git clone https://github.com/jacob-baker25/ml-practice.git  
-cd ml-practice
+git clone https://github.com/jacob-baker25/iris-ml-fastapi.git  
+cd iris-ml-fastapi
 ```
 2. Create and activate virtual environment
 ```bash
