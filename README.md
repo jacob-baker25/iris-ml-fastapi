@@ -16,14 +16,18 @@ This project provides a RESTful API built with **FastAPI** that uses a trained *
 ---
 
 ## Project Structure
+
 - main.py # FastAPI application code
 - train_model.py # Script to train and save the ML model
 - iris_model.joblib # Saved Logistic Regression model file
 - requirements.txt # Python dependencies
+- Dockerfile # Docker image build instructions
+- .dockerignore # Files/folders to ignore in Docker build
 - README.md # This file
 
+---
 
-Installation and Set Up
+## Installation and Set Up
 
 1. Clone Repository:
 ```bash
@@ -46,8 +50,68 @@ Running the API:
 ```bash
 uvicorn app.main:app --reload
 ```
-- Swagger UI: [http://localhost:8000/docs](url)
+- The API will run on http://localhost:8000.
 
-- ReDoc: [http://localhost:8000/redoc](url)
+- The root endpoint / returns a simple status message.
 
+- The /predict endpoint accepts POST requests with JSON payload containing iris flower measurements.
 
+---
+
+# Training the Model
+
+If you want to retrain the model or update it:
+
+```bash
+python train_model.py
+```
+This will:
+
+ - Load the Iris dataset from scikit-learn.
+
+ - Train a Logistic Regression model.
+
+ - Save the trained model as iris_model.joblib.
+
+---
+
+# API Usage
+## Health check  
+Endpoint: GET /
+
+Response:
+```json
+{
+  "message": "ML API is running"
+}
+```
+
+## Predict species  
+Endpoint: POST /predict
+
+Request JSON body:
+
+```json
+{
+  "sepal_length": 5.1,
+  "sepal_width": 3.5,
+  "petal_length": 1.4,
+  "petal_width": 0.2
+}
+```
+## Response JSON:  
+
+```json
+{
+  "predicted_species": "Setosa"
+}
+```
+
+# Docker Support (optional)
+To build and run the API in a Docker container:
+
+```bash
+docker build -t iris-api .
+docker run -p 8000:8000 iris-api
+```
+The API will be accessible at http://localhost:8000
