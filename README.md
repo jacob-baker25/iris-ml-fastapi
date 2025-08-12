@@ -76,6 +76,9 @@ This will:
 ---
 
 # API Usage
+
+
+
 ## Health check  
 Endpoint: `GET /`
 
@@ -85,6 +88,7 @@ Response:
   "message": "ML API is running"
 }
 ```
+- This is just meant to show the API is running
 
 ## Predict species  
 Endpoint: `POST /predict`
@@ -99,6 +103,12 @@ Request JSON body:
   "petal_width": 0.2
 }
 ```
+
+- This is where you can interact with the ML model
+- Start by pressing "Try is out" on the right hand side
+- Enter replace the zeroes with values for each dimension of the flower
+- Press "Execute"
+
 ## Response JSON:  
 
 ```json
@@ -106,6 +116,8 @@ Request JSON body:
   "predicted_species": "Setosa"
 }
 ```
+
+- Scroll down and see what type of Iris likely has these dimensions
 
 # Docker Support (optional)
 To build and run the API in a Docker container:
