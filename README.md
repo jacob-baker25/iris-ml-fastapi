@@ -106,7 +106,7 @@ Request JSON body:
 
 - This is where you can interact with the ML model
 - Start by pressing "Try is out" on the right hand side
-- Enter replace the zeroes with values for each dimension of the flower
+- Replace the zeroes with values for each dimension of the flower
 - Press "Execute"
 
 ## Response JSON:  
