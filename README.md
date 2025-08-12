@@ -114,4 +114,4 @@ To build and run the API in a Docker container:
 docker build -t iris-api .
 docker run -p 8000:8000 iris-api
 ```
-The API will be accessible at http://localhost:8000
+The API will be accessible at http://localhost:8000/docs
