@@ -1,13 +1,27 @@
-# ML Practice API
+# Iris Species Classification API
 
-- A FastAPI-based project for experimenting with machine learning workflows, APIs, and deployment. This repository contains code for serving ML models via a lightweight, high-performance REST API.
+This project provides a RESTful API built with **FastAPI** that uses a trained **Logistic Regression** machine learning model to classify iris flowers based on their sepal and petal measurements.
 
-Features: 
-- High-Performance API: Utilizes FastAPI for a fast and efficient API.
-- Modular Design: Built for easy extension and customization.
-- ML Inference Endpoints: Includes pre-built endpoints to deploy machine learning models quickly.
-- Automatic API Docs: Integrates Swagger UI & ReDoc for interactive, auto-generated documentation.
-- Example Model: Features a pre-integrated ML model to demonstrate functionality.
+---
+
+## Features
+
+- Trains a Logistic Regression model on the classic Iris dataset.
+- Saves the trained model using **joblib**.
+- Loads the saved model in a FastAPI app.
+- Provides a POST `/predict` endpoint to classify iris flower species from input measurements.
+- Returns the predicted species name: *Setosa*, *Versicolor*, or *Virginica*.
+- Includes a simple GET `/` health check endpoint.
+
+---
+
+## Project Structure
+- main.py # FastAPI application code
+- train_model.py # Script to train and save the ML model
+- iris_model.joblib # Saved Logistic Regression model file
+- requirements.txt # Python dependencies
+- README.md # This file
+
 
 Installation and Set Up
 
