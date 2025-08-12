@@ -52,9 +52,9 @@ uvicorn app.main:app --reload
 ```
 - The API will run on http://localhost:8000.
 
-- The root endpoint / returns a simple status message.
+- The root endpoint `/` returns a simple status message.
 
-- The /predict endpoint accepts POST requests with JSON payload containing iris flower measurements.
+- The `/predict` endpoint accepts POST requests with JSON payload containing iris flower measurements.
 
 ---
 
@@ -77,7 +77,7 @@ This will:
 
 # API Usage
 ## Health check  
-Endpoint: GET /
+Endpoint: `GET /`
 
 Response:
 ```json
@@ -87,7 +87,7 @@ Response:
 ```
 
 ## Predict species  
-Endpoint: POST /predict
+Endpoint: `POST /predict`
 
 Request JSON body:
 
